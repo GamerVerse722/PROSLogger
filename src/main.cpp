@@ -13,23 +13,6 @@ std::vector<std::string> logs_sub;
  */
 void initialize() {
 	pros::lcd::initialize();
-
-	PROSLogger::Manager::subscribe([&](const PROSLogger::LoggerEvent event) {
-		logs_sub.push_back(event.message);
-	});
-
-	PROSLogger::Logger log("PROSLogger");
-
-	log.debug("This is debug");
-	log.info("This is info");
-	log.warn("Something Messed up but it's fine");
-	log.error("Something really messed up go fix it");
-
-	PROSLogger::Manager::setLevel(PROSLogger::LogLevel::WARN);
-	log.debug("Manager Debug left out");
-	log.info("Manager Debug left out");
-	log.warn("Manager let warn through");
-	log.error("Manager needed error go through");
 }
 
 /**
@@ -78,6 +61,24 @@ void autonomous() {}
  */
 void opcontrol() {
 	pros::delay(1000);
+
+	PROSLogger::Manager::subscribe([&](const PROSLogger::LoggerEvent event) {
+		logs_sub.push_back(event.message);
+	});
+
+	PROSLogger::Logger log("PROSLogger");
+	
+	PROSLogger::Manager::setLevel(PROSLogger::LogLevel::DEBUG);
+
+	log.debug("This is debug");
+	log.info("This is info");
+	log.warn("Something Messed up but it's fine");
+	log.error("Something really messed up go fix it");
+
+	log.debug("Manager Debug left out");
+	log.info("Manager Debug left out");
+	log.warn("Manager let warn through");
+	log.error("Manager needed error go through");
 	
 	for (auto& string: logs_sub) {
 		pros::lcd::set_text(1, string);
