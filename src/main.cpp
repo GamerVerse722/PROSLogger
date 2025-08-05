@@ -75,6 +75,8 @@ void opcontrol() {
 	log.warn("Something Messed up but it's fine");
 	log.error("Something really messed up go fix it");
 
+	PROSLogger::Manager::setLevel(PROSLogger::LogLevel::WARN);
+
 	log.debug("Manager Debug left out");
 	log.info("Manager Debug left out");
 	log.warn("Manager let warn through");
