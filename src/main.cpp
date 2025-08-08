@@ -60,8 +60,6 @@ void autonomous() {}
  * task, not resume it from where it left off.
  */
 void opcontrol() {
-	pros::delay(1000);
-
 	PROSLogger::Manager::subscribe([&](const PROSLogger::LoggerEvent event) {
 		logs_sub.push_back(event.message);
 	});
