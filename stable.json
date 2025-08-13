@@ -1,4 +1,14 @@
 [
+        {
+        "metadata" : {
+            "location": "https://github.com/GamerVerse722/PROSLogger/releases/download/Release/PROSLogger@1.0.1.zip"
+        },
+        "name": "PROSLogger",
+        "py/object": "pros.conductor.templates.base_template.BaseTemplate",
+        "supported_kernels": "^4.1.2",
+        "target": "v5",
+        "version": "1.0.1"
+    },
     {
         "metadata" : {
             "location": "https://github.com/GamerVerse722/PROSLogger/releases/download/Release/PROSLogger@1.0.0.zip"
