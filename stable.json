@@ -1,7 +1,7 @@
 [
         {
         "metadata" : {
-            "location": "https://github.com/GamerVerse722/PROSLogger/releases/download/Release/PROSLogger@1.0.1.zip"
+            "location": "https://github.com/GamerVerse722/PROSLogger/releases/download/v1.0.1/PROSLogger@1.0.1.zip"
         },
         "name": "PROSLogger",
         "py/object": "pros.conductor.templates.base_template.BaseTemplate",
@@ -11,7 +11,7 @@
     },
     {
         "metadata" : {
-            "location": "https://github.com/GamerVerse722/PROSLogger/releases/download/Release/PROSLogger@1.0.0.zip"
+            "location": "https://github.com/GamerVerse722/PROSLogger/releases/download/v1.0.0/PROSLogger@1.0.0.zip"
         },
         "name": "PROSLogger",
         "py/object": "pros.conductor.templates.base_template.BaseTemplate",
